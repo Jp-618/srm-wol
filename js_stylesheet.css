@@ -1,0 +1,135 @@
+body{
+margin:0;
+padding:0;
+font-family: segoe print;
+}
+
+header{
+	background-color: #030a96;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+
+li {
+  list-style: none;
+}
+
+.logo{
+	float: left;
+	width: 20%;
+	padding-left: 5%;
+}
+
+.logo img{
+	padding-left: 5%;
+}
+
+.header-list ul{
+	margin: 0;
+	margin-left: 20%;
+}
+
+.header-list li {
+  float: left;
+  height: 15%;
+  width: 16.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header-list a {
+	background-color: #7085db;
+	opacity: .7;
+	line-height: 65px;
+	color: #fff;
+	text-decoration: none;
+    display: block;
+}
+
+.quiz-cont{
+	float: left;
+	background-color: lightblue;
+	height: 510px;
+	padding: 5.9% 8%;
+	margin-top: 65px; 
+	width: 60%;
+	z-index: 9;
+}
+
+.main h2{
+	font-size: 36px;
+}
+
+.main h3{
+	font-size: 24px;
+}
+
+.quiz-cont p{
+	font-size: 24px;
+}
+
+.invisible{
+	color: lightblue;
+}
+
+.next-btn {
+	float: right;
+	background-color: lightyellow;
+  padding: 12px 24px;
+  color: black;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.next-btn:hover {
+  opacity: 1;
+}
+
+.btn {
+	float: left;
+	background-color: lightyellow;
+  padding: 12px 24px;
+  color: black;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-wrapper{
+	float: left;
+	padding-left: 7%;
+}
+
+.btn-cont{
+	margin-left: 27%;
+}
+
+.status-cont{
+	float: left;
+	height: 600px;
+	background-color: lightyellow;
+	padding: 3% 2%;
+	margin-top: 65px;   
+	width: 20%;
+	margin-left: 76%;
+	text-align: center;
+	position: fixed;
+	z-index: 9;
+}
+
+.status-cont p{
+	font-size: 15px;
+}
+
+.status-cont strong{
+	font-size: 30px;
+}

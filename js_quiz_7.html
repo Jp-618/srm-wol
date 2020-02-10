@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Quiz</title>
+		<link rel="stylesheet" href="js_stylesheet.css">
+	</head>
+	<body>
+		
+		<header>
+			<div class="logo">
+				<img src="logo.png" height="65" width="87" align="center">
+			</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="languages.html">Languages</a></li>
+					<li><a href="quzzies.html">Quizzes</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="main">
+			<div class="quiz-cont">
+				<h2>JS Quiz</h2>
+				<h3>Question 7:</h3>
+				<h3>Write an IF statement for executing some code if "i" is NOT equal to 5?</h3>
+				<form action="js_quiz_8.html" name="myform" onsubmit="return validateAnswer()">
+					<p><input type="radio" id="r1" name="answer" value="r1">if i &lt;&gt; 5</p>
+					<p><input type="radio" id="r2" name="answer" value="r2">if (i &lt;&gt; 5)</p>
+					<p><input type="radio" id="r3" name="answer" value="r3">if (i != 5)</p>
+					<p class="invisible">a</p>
+					<input type="submit" name="next" value="Next" class="next-btn" onclick="getAnswer()" />
+				</form>
+			</div>
+
+			<div class="status-cont">
+				<h3>Progress</h3>
+				<br>
+				<img src="js-logo.png" height="250" width="200">
+				<br>
+				<br>
+				<p>JS Status:</p>
+				<p>No.of questions completed = 6</p>
+				<p>Quiz completed = No</p>
+				<br>
+			</div>
+		</div>
+		<script>
+			//window.localStorage.setItem("count",0);
+			function getAnswer()
+			{
+				if (document.getElementById('r1').checked) 
+				{
+					window.localStorage.setItem("js7",'js7r1');
+				}
+				if (document.getElementById('r2').checked)
+				{
+					window.localStorage.setItem("js7",'js7r2');
+				}
+				if (document.getElementById('r3').checked)
+				{
+					window.localStorage.setItem("js7",'js7r3');
+					let c = window.localStorage.getItem("count");
+					window.localStorage.setItem("count",c+1);
+				}
+				let ans = window.localStorage.getItem("js7");
+				let c = window.localStorage.getItem("count");
+				console.log(ans);
+				console.log(c);
+			}
+
+			function validateAnswer()
+			{
+				let n = '0';
+				if (document.getElementById('r1').checked) {
+					n = '1';
+				}
+				if (document.getElementById('r2').checked)
+				{
+					n = '1';
+				}
+				if (document.getElementById('r3').checked)
+				{
+					n = '1';
+				}
+				if (n == 0) 
+				{
+    				alert("An answer must be choosen before moving to next question!");
+				    return false;
+  				}	
+			}
+		</script>
+	</body>
+</html>

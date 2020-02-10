@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Quiz</title>
+		<link rel="stylesheet" href="js_stylesheet.css">
+	</head>
+	<body>
+		
+		<header>
+			<div class="logo">
+				<img src="logo.png" height="65" width="87" align="center">
+			</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="languages.html">Languages</a></li>
+					<li><a href="quzzies.html">Quizzes</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="quiz-cont">
+				<h2>JS Quiz</h2>
+				<h3>Question 4:</h3>
+				<h3>Where is the correct place to insert a JavaScript?</h3>
+				<form action="js_quiz_5.html" name="myform" onsubmit="return validateAnswer()">
+					<p><input type="radio" id="r1" name="answer" value="r1">The &lt;body&gt; section</p>
+					<p><input type="radio" id="r2" name="answer" value="r2">Both the &lt;head&gt; section and the &lt;body&gt; section are correct</p>
+					<p><input type="radio" id="r3" name="answer" value="r3">The &lt;head&gt; section</p>
+					<p class="invisible">a</p>
+					<input type="submit" name="next" value="Next" class="next-btn" onclick="getAnswer()" />
+				</form>
+			</div>
+
+			<div class="status-cont">
+				<h3>Progress</h3>
+				<br>
+				<img src="js-logo.png" height="250" width="200">
+				<br>
+				<br>
+				<p>JS Status:</p>
+				<p>No.of questions completed = 3</p>
+				<p>Quiz completed = No</p>
+				<br>
+			</div>
+		</div>
+		<script>
+			function getAnswer()
+			{
+				if (document.getElementById('r1').checked) {
+					window.localStorage.setItem("js4",'js4r1');
+				}
+				if (document.getElementById('r2').checked)
+				{
+					window.localStorage.setItem("js4",'js4r2');
+					let c = window.localStorage.getItem("count");
+					window.localStorage.setItem("count",c+1);
+				}
+				if (document.getElementById('r3').checked)
+				{
+					window.localStorage.setItem("js4",'js4r3');
+				}
+				let ans = window.localStorage.getItem("js4");
+				let c = window.localStorage.getItem("count");
+				console.log(ans);
+				console.log(c);
+			}
+
+			function validateAnswer()
+			{
+				let n = '0';
+				if (document.getElementById('r1').checked) {
+					n = '1';
+				}
+				if (document.getElementById('r2').checked)
+				{
+					n = '1';
+				}
+				if (document.getElementById('r3').checked)
+				{
+					n = '1';
+				}
+				if (n == 0) 
+				{
+    				alert("An answer must be choosen before moving to next question!");
+				    console.log("if workingg....");
+				    return false;
+  				}	
+			}
+		</script>
+	</body>
+</html>

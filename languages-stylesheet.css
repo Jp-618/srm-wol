@@ -1,0 +1,78 @@
+body{
+margin:0;
+padding:0;
+font-family: segoe print;
+}
+
+header{
+	background-color: #030a96;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+
+li {
+  list-style: none;
+}
+
+.logo{
+	float: left;
+	width: 20%;
+	padding-left: 5%;
+}
+
+.logo img{
+	padding-left: 5%;
+}
+
+.header-list ul{
+	margin: 0;
+	margin-left: 20%;
+}
+
+.header-list li {
+  float: left;
+  height: 15%;
+  width: 16.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header-list a {
+	background-color: #7085db;
+	opacity: .7;
+	line-height: 65px;
+	color: #fff;
+	text-decoration: none;
+    display: block;
+}
+
+.main{
+	float: left;
+	background-color: lightblue;
+	width: 92%;
+	margin-top: 65px;
+	padding: 5% 4%;
+}
+
+.lesson{
+	padding: 3% 3%;
+}
+
+.lesson-logo{
+	float: left;
+	width: 30%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 5%;
+}
+
+.lesson-description{
+	height: 300px;
+	width: 40%;
+	margin-left: 40%;
+	padding-top: 5%;
+}

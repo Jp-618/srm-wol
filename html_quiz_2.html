@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> HTML Quiz</title>
+		<link rel="stylesheet" href="html_stylesheet.css">
+	</head>
+	<body>
+		
+		<header>
+			<div class="logo">
+				<img src="logo.png" height="65" width="87" align="center">
+			</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="languages.html">Languages</a></li>
+					<li><a href="quzzies.html">Quizzes</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="quiz-cont">
+				<h2>HTML Quiz</h2>
+				<h3>Question 2:</h3>
+				<h3>Who is making the Web standards?</h3>
+				<form action="html_quiz_3.html" name="myform" onsubmit="return validateAnswer()">
+					<p><input type="radio" id="r1" name="answer" value="r1">The World Wide Web Consortium</p>
+					<p><input type="radio" id="r2" name="answer" value="r2">Microsoft</p>
+					<p><input type="radio" id="r3" name="answer" value="r3">Google</p>
+					<p><input type="radio" id="r4" name="answer" value="r4">Mozilla</p>
+					
+					<input type="submit" name="next" value="Next" class="next-btn" onclick="getAnswer()" />
+				</form>
+			</div>
+
+			<div class="status-cont">
+				<h3>Progress</h3>
+				<br>
+				<img src="html-5-logo.png" height="250" width="200">
+				<br>
+				<br>
+				<p>HTML Status:</p>
+				<p>No.of questions completed = 1</p>
+				<p>Quiz completed = No</p>
+				<br>
+			</div>
+		</div>
+		<script>
+			function getAnswer()
+			{
+				if (document.getElementById('r1').checked) {
+					window.localStorage.setItem("html2",'html2r1');
+					let c = window.localStorage.getItem("count");
+					window.localStorage.setItem("count",c+1);
+				}
+				if (document.getElementById('r2').checked)
+				{
+					window.localStorage.setItem("html2",'html2r2');
+				}
+				if (document.getElementById('r3').checked)
+				{
+					window.localStorage.setItem("html2",'html2r3');
+				}
+				if (document.getElementById('r4').checked)
+				{
+					window.localStorage.setItem("html2",'html2r4');
+				}
+				let ans = window.localStorage.getItem("html2");
+				let c = window.localStorage.getItem("count");
+				console.log(ans);
+				console.log(c);
+			}
+
+			function validateAnswer()
+			{
+				let n = '0';
+				if (document.getElementById('r1').checked) {
+					n = '1';
+				}
+				if (document.getElementById('r2').checked)
+				{
+					n = '1';
+				}
+				if (document.getElementById('r3').checked)
+				{
+					n = '1';
+				}
+				if (document.getElementById('r4').checked)
+				{
+					n = '1';
+				}
+				if (n == 0) 
+				{
+    				alert("An answer must be choosen before moving to next question!");
+				    console.log("if workingg....");
+				    return false;
+  				}	
+			}
+		</script>
+	</body>
+</html>

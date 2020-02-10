@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Quiz</title>
+		<link rel="stylesheet" href="html_stylesheet.css">
+		<script type ="text/javascript">
+			function  calculateResult()
+			{
+				let c = window.localStorage.getItem("count");
+				console.log(c);
+				let n=parseInt('0');
+				for(let i=0;i<c.length;i++)
+				{
+					if(c[i]=='1')
+						n++;
+				}
+				document.getElementById('result').innerHTML = n;
+			}
+
+			function answer()
+			{
+				let ans = window.localStorage.getItem("html1");
+				if(ans==='html1r1')
+				{
+					document.getElementById('html1r').innerHTML = "correct";
+					document.getElementById('html1r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html1r').innerHTML = "wrong";
+					document.getElementById('html1r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html2");
+				if(ans==='html2r1')
+				{
+					document.getElementById('html2r').innerHTML = "correct";
+					document.getElementById('html2r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html2r').innerHTML = "wrong";
+					document.getElementById('html2r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html3");
+				if(ans==='html3r2')
+				{
+					document.getElementById('html3r').innerHTML = "correct";
+					document.getElementById('html3r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html3r').innerHTML = "wrong";
+					document.getElementById('html3r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html4");
+				if(ans==='html4r2')
+				{
+					document.getElementById('html4r').innerHTML = "correct";
+					document.getElementById('html4r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html4r').innerHTML = "wrong";
+					document.getElementById('html4r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html5");
+				if(ans==='html5r1')
+				{
+					document.getElementById('html5r').innerHTML = "correct";
+					document.getElementById('html5r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html5r').innerHTML = "wrong";
+					document.getElementById('html5r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html6");
+				if(ans==='html6r3')
+				{
+					document.getElementById('html6r').innerHTML = "correct";
+					document.getElementById('html6r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html6r').innerHTML = "wrong";
+					document.getElementById('html6r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html7");
+				if(ans==='html7r3')
+				{
+					document.getElementById('html7r').innerHTML = "correct";
+					document.getElementById('html7r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html7r').innerHTML = "wrong";
+					document.getElementById('html7r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html8");
+				if(ans==='html8r3')
+				{
+					document.getElementById('html8r').innerHTML = "correct";
+					document.getElementById('html8r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html8r').innerHTML = "wrong";
+					document.getElementById('html8r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html9");
+				if(ans==='html9r2')
+				{
+					document.getElementById('html9r').innerHTML = "correct";
+					document.getElementById('html9r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html9r').innerHTML = "wrong";
+					document.getElementById('html9r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("html10");
+				if(ans==='html10r4')
+				{
+					document.getElementById('html10r').innerHTML = "correct";
+					document.getElementById('html10r4').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('html10r').innerHTML = "wrong";
+					document.getElementById('html10r4').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<div class="logo">
+				<img src="logo.png" height="65" width="87" align="center">
+			</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="languages.html">Languages</a></li>
+					<li><a href="quzzies.html">Quizzes</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="quiz-cont" style="height: unset;">
+				<h2>HTML Quiz Results!!</h2>
+
+				<h3>Question 1:</h3>
+				<h3>What does HTML stand for?</h3>
+				<p id="html1r1"><input type="radio" id="r1" name="answer" value="r1" disabled>Hyper Text Markup Language</p>
+				<p id="html1r2"><input type="radio" id="r2" name="answer" value="r2" disabled>Home Tool Markup Language</p>
+				<p id="html1r3"><input type="radio" id="r3" name="answer" value="r3" disabled>Hyperlinks and Text Markup Language</p>
+				<p>Your answer is <span id="html1r"></span>.</p>
+
+				<h3>Question 2:</h3>
+				<h3>Who is making the Web standards?</h3>
+				<p id="html2r1"><input type="radio" id="r1" name="answer" value="r1" disabled>The World Wide Web Consortium</p>
+				<p id="html2r2"><input type="radio" id="r2" name="answer" value="r2" disabled>Microsoft</p>
+				<p id="html2r3"><input type="radio" id="r3" name="answer" value="r3" disabled>Google</p>
+				<p id="html2r4"><input type="radio" id="r4" name="answer" value="r4" disabled>Mozilla</p>
+				<p>Your answer is <span id="html2r"></span>.</p>
+
+				<h3>Question 3:</h3>
+				<h3>Choose the correct html element for the largest heading:</h3>
+				<p id="html3r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;heading&gt;</p>
+				<p id="html3r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;h1&gt;</p>
+				<p id="html3r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;head&gt;</p>
+				<p id="html3r4"><input type="radio" id="r4" name="answer" value="r4" disabled>&lt;h6&gt;</p>
+				<p>Your answer is <span id="html3r"></span>.</p>
+
+				<h3>Question 4:</h3>
+				<h3>What is the correct html element for inserting a line break?</h3>
+				<p id="html4r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;break&gt;</p>
+				<p id="html4r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;br&gt;</p>
+				<p id="html4r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;lb&gt;</p>
+				<p>Your answer is <span id="html4r"></span>.</p>
+
+				<h3>Question 5:</h3>
+				<h3>What is the correct html for adding a background color?</h3>
+				<p id="html5r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;body style="background-color:yellow;"&gt;</p>
+				<p id="html5r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;background&gt;yellow&lt;/background&gt;</p>
+				<p id="html5r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;body bg="yellow"&gt;</p>
+				<p>Your answer is <span id="html5r"></span>.</p>
+
+				<h3>Question 6:</h3>
+				<h3>Choose the correct html element to define important text:</h3>
+				<p id="html6r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;b&gt;</p>
+				<p id="html6r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;important&gt;</p>
+				<p id="html6r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;strong&gt;</p>
+				<p id="html6r4"><input type="radio" id="r4" name="answer" value="r4" disabled>&lt;i&gt;</p>
+				<p>Your answer is <span id="html6r"></span>.</p>
+
+				<h3>Question 7:</h3>
+				<h3>Choose the correct html element to define emphasized text:</h3>
+				<p id="html7r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;i&gt;</p>
+				<p id="html7r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;italic&gt;</p>
+				<p id="html7r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;em&gt;</p>
+				<p>Your answer is <span id="html7r"></span>.</p>
+
+				<h3>Question 8:</h3>
+				<h3>How can you open a link in a new tab/browser window?</h3>
+				<p id="html8r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;a href="url" new&gt;</p>
+				<p id="html8r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;a href="url" target="new"&gt;</p>
+				<p id="html8r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;a href="url" target="_blank"&gt;</p>
+				<p>Your answer is <span id="html8r"></span>.</p>
+
+				<h3>Question 9:</h3>
+				<h3>How can you make a numbered list?</h3>
+				<p id="html9r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;ul&gt;</p>
+				<p id="html9r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;ol&gt;</p>
+				<p id="html9r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;dl&gt;</p>
+				<p id="html9r4"><input type="radio" id="r4" name="answer" value="r4" disabled>&lt;list&gt;</p>
+				<p>Your answer is <span id="html9r"></span>.</p>
+
+				<h3>Question 10:</h3>
+				<h3>What is the correct html for making a checkbox?</h3>
+				<p id="html10r1"><input type="radio" id="r1" name="answer" value="r1" disabled>&lt;check&gt;</p>
+				<p id="html10r2"><input type="radio" id="r2" name="answer" value="r2" disabled>&lt;input type="check"&gt;</p>
+				<p id="html10r3"><input type="radio" id="r3" name="answer" value="r3" disabled>&lt;checkbox&gt;</p>
+				<p id="html10r4"><input type="radio" id="r4" name="answer" value="r4" disabled>&lt;input type="checkbox"&gt;</p>
+				<p>Your answer is <span id="html10r"></span>.</p>
+
+				<div class="btn-cont">
+					<div class="btn-wrapper">
+						<input type="button" name="repeat" value="Repeat Quiz" class="btn" onclick="window.location.href = 'html_quiz_1.html';">
+					</div>
+					<div class="btn-wrapper">
+						<input type="button" name="quiz" value="Try Other Quizzes" class="btn" onclick="window.location.href = 'quzzies.html';">
+					</div>
+				</div>
+			</div>
+
+			<div class="status-cont">
+				<h3>Progress</h3>
+				<br>
+				<img src="html-5-logo.png" height="250" width="200">
+				<br>
+				<p>HTML Status:</p>
+				<p>No.of questions completed = 10</p>
+				<p>Quiz completed = YES!!</p>
+				<strong>Your Score:</strong>
+				<strong id='result'></strong>
+			</div>
+		</div>
+		<script>
+			calculateResult();
+			answer();
+		</script>
+	</body>
+</html>

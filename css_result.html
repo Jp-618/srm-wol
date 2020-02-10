@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Quiz</title>
+		<link rel="stylesheet" href="css_stylesheet.css">
+		<script type ="text/javascript">
+			function  calculateResult()
+			{
+				let c = window.localStorage.getItem("count");
+				console.log(c);
+				let n=parseInt('0');
+				for(let i=0;i<c.length;i++)
+				{
+					if(c[i]=='1')
+						n++;
+				}
+				document.getElementById('result').innerHTML = n;
+			}
+
+			function answer()
+			{
+				let ans = window.localStorage.getItem("css1");
+				if(ans==='css1r1')
+				{
+					document.getElementById('css1r').innerHTML = "correct";
+					document.getElementById('css1r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css1r').innerHTML = "wrong";
+					document.getElementById('css1r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css2");
+				if(ans==='css2r1')
+				{
+					document.getElementById('css2r').innerHTML = "correct";
+					document.getElementById('css2r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css2r').innerHTML = "wrong";
+					document.getElementById('css2r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css3");
+				if(ans==='css3r2')
+				{
+					document.getElementById('css3r').innerHTML = "correct";
+					document.getElementById('css3r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css3r').innerHTML = "wrong";
+					document.getElementById('css3r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css4");
+				if(ans==='css4r2')
+				{
+					document.getElementById('css4r').innerHTML = "correct";
+					document.getElementById('css4r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css4r').innerHTML = "wrong";
+					document.getElementById('css4r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css5");
+				if(ans==='css5r1')
+				{
+					document.getElementById('css5r').innerHTML = "correct";
+					document.getElementById('css5r1').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css5r').innerHTML = "wrong";
+					document.getElementById('css5r1').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css6");
+				if(ans==='css6r3')
+				{
+					document.getElementById('css6r').innerHTML = "correct";
+					document.getElementById('css6r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css6r').innerHTML = "wrong";
+					document.getElementById('css6r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css7");
+				if(ans==='css7r3')
+				{
+					document.getElementById('css7r').innerHTML = "correct";
+					document.getElementById('css7r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css7r').innerHTML = "wrong";
+					document.getElementById('css7r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css8");
+				if(ans==='css8r3')
+				{
+					document.getElementById('css8r').innerHTML = "correct";
+					document.getElementById('css8r3').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css8r').innerHTML = "wrong";
+					document.getElementById('css8r3').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css9");
+				if(ans==='css9r2')
+				{
+					document.getElementById('css9r').innerHTML = "correct";
+					document.getElementById('css9r2').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css9r').innerHTML = "wrong";
+					document.getElementById('css9r2').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+
+				ans = window.localStorage.getItem("css10");
+				if(ans==='css10r4')
+				{
+					document.getElementById('css10r').innerHTML = "correct";
+					document.getElementById('css10r4').style.backgroundColor = "#2bd678";
+				}
+				else
+				{
+					document.getElementById('css10r').innerHTML = "wrong";
+					document.getElementById('css10r4').style.backgroundColor = "#2bd678";
+					document.getElementById(ans).style.backgroundColor = "#f05d7b";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<div class="logo">
+				<img src="logo.png" height="65" width="87" align="center">
+			</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="languages.html">Languages</a></li>
+					<li><a href="quzzies.html">Quizzes</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="quiz-cont" style="height: unset;">
+				<h2>CSS Quiz Results!!</h2>
+
+				<h3>Question 1:</h3>
+				<h3>What does CSS stand for?</h3>
+				<p id="css1r1"><input type="radio" id="r1" name="answer" value="r1" disabled>Cascading Style Sheets</p>
+				<p id="css1r2"><input type="radio" id="r2" name="answer" value="r2" disabled>Colorful Style Sheets</p>
+				<p id="css1r3"><input type="radio" id="r3" name="answer" value="r3" disabled>Computer Style Sheets</p>
+				<p>Your answer is <span id="css1r"></span>.</p>
+
+				<h3>Question 2:</h3>
+				<h3>Which HTML attribute is used to define inline styles?</h3>
+				<p id="css2r1"><input type="radio" id="r1" name="answer" value="r1" disabled>style</p>
+				<p id="css2r2"><input type="radio" id="r2" name="answer" value="r2" disabled>font</p>
+				<p id="css2r3"><input type="radio" id="r3" name="answer" value="r3" disabled>class</p>
+				<p id="css2r4"><input type="radio" id="r4" name="answer" value="r4" disabled>styles</p>
+				<p>Your answer is <span id="css2r"></span>.</p>
+
+				<h3>Question 3:</h3>
+				<h3>Which is the correct CSS syntax?</h3>
+				<p id="css3r1"><input type="radio" id="r1" name="answer" value="r1" disabled>{body;color:black;}</p>
+				<p id="css3r2"><input type="radio" id="r2" name="answer" value="r2" disabled>body {color: black;}</p>
+				<p id="css3r3"><input type="radio" id="r3" name="answer" value="r3" disabled>{body:color=black;}</p>
+				<p id="css3r4"><input type="radio" id="r4" name="answer" value="r4" disabled>body:color=black;</p>
+				<p>Your answer is <span id="css3r"></span>.</p>
+
+				<h3>Question 4:</h3>
+				<h3>How do you insert a comment in a CSS file?</h3>
+				<p id="css4r1"><input type="radio" id="r1" name="answer" value="r1" disabled>// this is a comment //</p>
+				<p id="css4r2"><input type="radio" id="r2" name="answer" value="r2" disabled>/* this is a comment */</p>
+				<p id="css4r3"><input type="radio" id="r3" name="answer" value="r3" disabled>' this is a comment</p>
+				<p>Your answer is <span id="css4r"></span>.</p>
+
+				<h3>Question 5:</h3>
+				<h3>Which property is used to change the background color?</h3>
+				<p id="css5r1"><input type="radio" id="r1" name="answer" value="r1" disabled>background-color</p>
+				<p id="css5r2"><input type="radio" id="r2" name="answer" value="r2" disabled>color</p>
+				<p id="css5r3"><input type="radio" id="r3" name="answer" value="r3" disabled>bgcolor</p>
+				<p>Your answer is <span id="css5r"></span>.</p>
+
+				<h3>Question 6:</h3>
+				<h3>Which CSS property controls the text size?</h3>
+				<p id="css6r1"><input type="radio" id="r1" name="answer" value="r1" disabled>text-style</p>
+				<p id="css6r2"><input type="radio" id="r2" name="answer" value="r2" disabled>text-size</p>
+				<p id="css6r3"><input type="radio" id="r3" name="answer" value="r3" disabled>font-size</p>
+				<p id="css6r4"><input type="radio" id="r4" name="answer" value="r4" disabled>font-style</p>
+				<p>Your answer is <span id="css6r"></span>.</p>
+
+				<h3>Question 7:</h3>
+				<h3>How do you display hyperlinks without an underline?</h3>
+				<p id="css7r1"><input type="radio" id="r1" name="answer" value="r1" disabled>a {decoration:no-underline;}</p>
+				<p id="css7r2"><input type="radio" id="r2" name="answer" value="r2" disabled>a {text-decoration:no-underline;}</p>
+				<p id="css7r3"><input type="radio" id="r3" name="answer" value="r3" disabled>a {text-decoration:none;}</p>
+				<p>Your answer is <span id="css7r"></span>.</p>
+
+				<h3>Question 8:</h3>
+				<h3>How do you make each word in a text start with a capital letter?</h3>
+				<p id="css8r1"><input type="radio" id="r1" name="answer" value="r1" disabled>transform:capitalize</p>
+				<p id="css8r2"><input type="radio" id="r2" name="answer" value="r2" disabled>text-style:capitalize</p>
+				<p id="css8r3"><input type="radio" id="r3" name="answer" value="r3" disabled>text-transform:capitalize </p>
+				<p>Your answer is <span id="css8r"></span>.</p>
+
+				<h3>Question 9:</h3>
+				<h3>How do you make the text bold?</h3>
+				<p id="css9r1"><input type="radio" id="r1" name="answer" value="r1" disabled>font:bold;<</p>
+				<p id="css9r2"><input type="radio" id="r2" name="answer" value="r2" disabled>font-weight:bold;</p>
+				<p id="css9r3"><input type="radio" id="r3" name="answer" value="r3" disabled>style:bold;</p>
+				<p id="css9r4"><input type="radio" id="r4" name="answer" value="r4" disabled>weight:bold;</p>
+				<p>Your answer is <span id="css9r"></span>.</p>
+
+				<h3>Question 10:</h3>
+				<h3>How do you select elements with class name 'test'?</h3>
+				<p id="css10r1"><input type="radio" id="r1" name="answer" value="r1" disabled>*test</p>
+				<p id="css10r2"><input type="radio" id="r2" name="answer" value="r2" disabled>test</p>
+				<p id="css10r3"><input type="radio" id="r3" name="answer" value="r3" disabled>#test</p>
+				<p id="css10r4"><input type="radio" id="r4" name="answer" value="r4" disabled>.test</p>
+				<p>Your answer is <span id="css10r"></span>.</p>
+
+				<div class="btn-cont">
+					<div class="btn-wrapper">
+						<input type="button" name="repeat" value="Repeat Quiz" class="btn" onclick="window.location.href = 'css_quiz_1.html';">
+					</div>
+					<div class="btn-wrapper">
+						<input type="button" name="quiz" value="Try Other Quizzes" class="btn" onclick="window.location.href = 'quzzies.html';">
+					</div>
+				</div>
+			</div>
+
+			<div class="status-cont">
+				<h3>Progress</h3>
+				<br>
+				<img src="css-logo.png" height="250" width="200">
+				<br>
+				<p>CSS Status:</p>
+				<p>No.of questions completed = 10</p>
+				<p>Quiz completed = YES!!</p>
+				<strong>Your Score:</strong>
+				<strong id='result'></strong>
+			</div>
+		</div>
+		<script>
+			calculateResult();
+			answer();
+		</script>
+	</body>
+</html>
